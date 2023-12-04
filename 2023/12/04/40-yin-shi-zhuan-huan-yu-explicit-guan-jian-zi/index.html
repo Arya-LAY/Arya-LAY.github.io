@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Arya">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Arya">
+    <meta name="description" content="40 隐式转换与explicit关键字Entity类123456789101112131415161718192021class Entity{private:	String m_Name;	int m_Age;public:	Entity">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Arya</title>
+    <title>Arya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -344,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -385,28 +385,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-02
+                    2023-12-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-02
+                    2023-03-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    79
+                    529
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -429,21 +429,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="40-隐式转换与explicit关键字"><a href="#40-隐式转换与explicit关键字" class="headerlink" title="40 隐式转换与explicit关键字"></a>40 隐式转换与explicit关键字</h1><h2 id="Entity类"><a href="#Entity类" class="headerlink" title="Entity类"></a>Entity类</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Entity</span></span><br><span class="line">{</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	String m_Name;</span><br><span class="line">	<span class="type">int</span> m_Age;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Entity</span>()</span><br><span class="line">		:<span class="built_in">m_Name</span>(<span class="string">"Unknown"</span>),<span class="built_in">m_Age</span>(<span class="number">-1</span>){}</span><br><span class="line"></span><br><span class="line">	<span class="built_in">Entity</span>(<span class="type">const</span> String&amp; name)</span><br><span class="line">		:<span class="built_in">m_Name</span>(name),<span class="built_in">m_Age</span>(<span class="number">-1</span>){}</span><br><span class="line"></span><br><span class="line">	<span class="built_in">Entity</span>(<span class="type">int</span> age)</span><br><span class="line">		:<span class="built_in">m_Name</span>(<span class="string">"Unknown"</span>),<span class="built_in">m_Age</span>(age){}</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">const</span> String&amp; <span class="title">GetName</span><span class="params">()</span><span class="type">const</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="keyword">return</span> m_Name;</span><br><span class="line">	}</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<p>可以写东西嘛</p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="正常创建对象及实例化"><a href="#正常创建对象及实例化" class="headerlink" title="正常创建对象及实例化"></a>正常创建对象及实例化</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Entity <span class="title">a</span><span class="params">(<span class="string">"arya"</span>)</span></span>;      <span class="comment">// 调用第二个构造函数</span></span><br><span class="line"><span class="function">Entity <span class="title">b</span><span class="params">(<span class="number">22</span>)</span></span>;          <span class="comment">//调用第三个构造函数</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="涉及隐式转换的创建对象及实例化"><a href="#涉及隐式转换的创建对象及实例化" class="headerlink" title="涉及隐式转换的创建对象及实例化"></a>涉及隐式转换的创建对象及实例化</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Entity b = <span class="number">22</span>;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p>隐式构造函数：将22转换成一个<code>Entity</code>，因为<code>Entity</code>类中有一个接受<code>int</code>类型参数的构造函数。</p>
+<p>xxxxxxxxxx&nbsp;struct Vector{    int X, Y;​    Vector(int x,int y)        :X(x),Y(y){}​    Vector Add(const Vector&amp; other)const    {        return Vector(X + other.X, Y + other.Y); &nbsp; &nbsp; &nbsp;//在return里直接调用构造函数，代码非常简练    }​    Vector operator + (const Vector&amp; other)const    {        return Add(other); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//可以直接调用Add()    } &nbsp; &nbsp; &nbsp; &nbsp;bool operator == (const Vector&amp; other) const    {        return X == other.X &amp;&amp; Y == other.Y; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //简练，要记得这么写​    }    bool operator != (const Vector&amp; other) const    {        //return !operator==(other); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  //也对，但是比较奇怪        return !(*this == other); &nbsp; &nbsp;//使用重载过的== 操作符​    }​    std::ostream &amp; operator &lt;&lt; (std::ostream&amp; stream,const Vector&amp;other) &nbsp;const &nbsp; &nbsp; //重载&lt;&lt;运算符,这里提示函数参数过多    {        stream &lt;&lt; other.X &lt;&lt; “ “ &lt;&lt; other.Y &lt;&lt; std::endl;        return stream;    }​};​Vector v1(2, 3);Vector v2(1, 2);Vector result=v1 + v2;​std::cout &lt;&lt; result &lt;&lt; std::endl;c++</p>
+<p>例如，<code>const char*</code>到 <code>string</code> 到 <code>Entity</code></p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Entity a = <span class="string">"arya"</span>;     <span class="comment">//❌，因为“arya”是const char * 类型，到达Entity中间还有一步。</span></span><br><span class="line">Entity a = std::<span class="built_in">string</span>(<span class="string">"arya"</span>);     <span class="comment">//✔ ，string默认构造函数，将字符串显示转换为string类型，c++隐式的转换为Entity</span></span><br><span class="line">Entity a = <span class="built_in">Entity</span>(<span class="string">"arya"</span>);      <span class="comment">//✔，将const char *隐式转换为string,然后调用构造函数</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="explicit关键字：禁止隐式调用构造函数"><a href="#explicit关键字：禁止隐式调用构造函数" class="headerlink" title="explicit关键字：禁止隐式调用构造函数"></a>explicit关键字：禁止隐式调用构造函数</h2><p>C++编译器默认支持隐式转换的。有时需要禁止隐式转换，这就是<code>explicit</code>存在的意义。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">Entity</span><span class="params">(<span class="type">int</span> age)</span></span></span><br><span class="line"><span class="function">		:m_Name(<span class="string">"Unknown"</span>),m_Age(age){</span>}</span><br><span class="line"></span><br><span class="line">Entity b = <span class="number">22</span>;         <span class="comment">//会报错，不能从int转换为Entity</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h3 id="总结：除非必要，可以不用隐式转换，就正常的创建对象及实例化。"><a href="#总结：除非必要，可以不用隐式转换，就正常的创建对象及实例化。" class="headerlink" title="总结：除非必要，可以不用隐式转换，就正常的创建对象及实例化。"></a>总结：除非必要，可以不用隐式转换，就正常的创建对象及实例化。</h3>
                 
             </div>
             <hr/>
@@ -469,7 +469,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Arya-Lay.github.io#大小写/2023/12/02/hello-world/">http://Arya-Lay.github.io#大小写/2023/12/02/hello-world/</a>
+                    <a href="http://Arya-Lay.github.io#大小写/2023/12/04/40-yin-shi-zhuan-huan-yu-explicit-guan-jian-zi/">http://Arya-Lay.github.io#大小写/2023/12/04/40-yin-shi-zhuan-huan-yu-explicit-guan-jian-zi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,7 +554,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/04/11-how-to-debug-c-vs/">
+                <a href="/2023/12/04/41-yun-suan-fu-ji-qi-chong-zai-in-c/">
                     <div class="card-image">
                         
                         
@@ -588,16 +588,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/02/hello-world/">
+                <a href="/2023/12/04/39-new-guan-jian-zi-in-c/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -608,7 +608,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
                             </span>
                         <span class="publish-author">
                             
@@ -618,7 +618,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

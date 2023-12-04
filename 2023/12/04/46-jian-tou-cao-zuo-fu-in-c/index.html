@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, Arya">
-    <meta name="description" content="">
+    <meta name="keywords" content="Arya">
+    <meta name="description" content="46 箭头操作符 in C++用法一：代替解引用和.操作符。1234Entity entity;Entity* e = &amp;amp;entity;(*e).print();e-&amp;gt;print();   //与前一行到达的意义效果均一样
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | Arya</title>
+    <title>Arya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -344,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -385,21 +387,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-02
+                    2023-12-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-04
+                    2023-03-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    270
                 </div>
                 
 
@@ -429,7 +431,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="46-箭头操作符-in-C"><a href="#46-箭头操作符-in-C" class="headerlink" title="46 箭头操作符 in C++"></a>46 箭头操作符 in C++</h1><h2 id="用法一：代替解引用和-操作符。"><a href="#用法一：代替解引用和-操作符。" class="headerlink" title="用法一：代替解引用和.操作符。"></a>用法一：代替解引用和.操作符。</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Entity entity;</span><br><span class="line">Entity* e = &amp;entity;</span><br><span class="line">(*e).<span class="built_in">print</span>();</span><br><span class="line">e-&gt;<span class="built_in">print</span>();   <span class="comment">//与前一行到达的意义效果均一样</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="用法二"><a href="#用法二" class="headerlink" title="用法二"></a>用法二</h2><p>重载操作符，在自定义的类中使用它。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Entity</span></span><br><span class="line">{</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> x;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span><span class="type">const</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		std::cout &lt;&lt; <span class="string">"hello!"</span> &lt;&lt; std::endl;</span><br><span class="line">	}</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ScopedPtr</span></span><br><span class="line">{</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	Entity* m_obj;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">ScopedPtr</span>(Entity* entity)</span><br><span class="line">		:<span class="built_in">m_obj</span>(entity)</span><br><span class="line">	{</span><br><span class="line"></span><br><span class="line">	}</span><br><span class="line">	~<span class="built_in">ScopedPtr</span>()</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">delete</span> m_obj;     <span class="comment">//为什么，当Entity超出范围时，这个类会自动删除它</span></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="function">Entity* <span class="title">GetObject</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="keyword">return</span> m_obj;</span><br><span class="line">	}</span><br><span class="line">	Entity * <span class="keyword">operator</span> -&gt;()      <span class="comment">//重载运算符</span></span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> m_obj;</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">const</span> Entity* <span class="title">GetObject</span><span class="params">()</span><span class="type">const</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="keyword">return</span> m_obj;</span><br><span class="line">	}</span><br><span class="line">	<span class="type">const</span> Entity* <span class="keyword">operator</span> -&gt;()<span class="type">const</span>    <span class="comment">//const版本</span></span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> m_obj;</span><br><span class="line">	}</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">const</span> ScopedPtr entity= <span class="keyword">new</span> <span class="built_in">Entity</span>(); </span><br><span class="line">	<span class="comment">//调用const版本的函数</span></span><br><span class="line">	entity.<span class="built_in">GetObject</span>()-&gt;<span class="built_in">print</span>();</span><br><span class="line">	entity-&gt;<span class="built_in">print</span>();    <span class="comment">//使用了重载运算符，达到和上一行相同的意义和效果</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="用法三"><a href="#用法三" class="headerlink" title="用法三"></a>用法三</h2><p>实际使用箭头操作符，来获取内存中某个成员变量的偏移量。</p>
+<p>处理字节流是会用到。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Vector3</span></span><br><span class="line">{</span><br><span class="line">	<span class="type">float</span> x, y, x;</span><br><span class="line">};</span><br><span class="line"><span class="type">int</span> offset = (<span class="type">int</span>)&amp;((Vector3*)<span class="literal">nullptr</span>)-&gt;x;  <span class="comment">// 可以得到x在对象中的偏移量，y偏移量4，z偏移量是8；</span></span><br></pre></td></tr></tbody></table></figure>
+
+
                 
             </div>
             <hr/>
@@ -455,7 +466,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Arya-Lay.github.io#大小写/2023/12/02/wo-de-di-yi-pian-bo-ke/">http://Arya-Lay.github.io#大小写/2023/12/02/wo-de-di-yi-pian-bo-ke/</a>
+                    <a href="http://Arya-Lay.github.io#大小写/2023/12/04/46-jian-tou-cao-zuo-fu-in-c/">http://Arya-Lay.github.io#大小写/2023/12/04/46-jian-tou-cao-zuo-fu-in-c/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,18 +547,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/02/wo-de-di-yi-pian-bo-ke/">
+                <a href="/2023/12/04/47-dong-tai-shu-zu-vector-in-c/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -557,9 +567,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -568,7 +578,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -579,13 +588,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/02/my-first-blog/">
+                <a href="/2023/12/04/45-kao-bei-yu-kao-bei-gou-zao-han-shu-inc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="my first blog">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">my first blog</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -596,7 +605,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
                             </span>
                         <span class="publish-author">
                             
@@ -783,7 +792,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">79</span>
+                        class="white-color">6.7k</span>
             
             
             

@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Arya">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Arya">
+    <meta name="description" content="47 动态数组vector in C++标准模板库STL，包含很多容器，模板化，可以自己觉得容器中的数据类型Vector在std命名空间中
+动态数组，数组大小是可变的。创建时可以不指定大小。
+实际上以向量vector命名是不太合适的，Arr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Arya</title>
+    <title>Arya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -344,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -385,28 +387,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-02
+                    2023-12-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-02
+                    2023-03-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    79
+                    647
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -429,20 +431,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="47-动态数组vector-in-C"><a href="#47-动态数组vector-in-C" class="headerlink" title="47 动态数组vector in C++"></a>47 动态数组vector in C++</h1><h3 id="标准模板库STL，包含很多容器，模板化，可以自己觉得容器中的数据类型"><a href="#标准模板库STL，包含很多容器，模板化，可以自己觉得容器中的数据类型" class="headerlink" title="标准模板库STL，包含很多容器，模板化，可以自己觉得容器中的数据类型"></a>标准模板库<code>STL</code>，包含很多容器，模板化，可以自己觉得容器中的数据类型</h3><h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><p>在std命名空间中</p>
+<p>动态数组，数组大小是可变的。创建时可以不指定大小。</p>
+<p>实际上以向量<code>vector</code>命名是不太合适的，<code>ArrayList</code>更合理一些。</p>
+<p>速度不是标准模板库优先考虑的东西，因此许多团队会写自己的模板库，比如<code>EASTL</code>，这个是开源的。</p>
+<h3 id="Vector-工作方式"><a href="#Vector-工作方式" class="headerlink" title="Vector 工作方式"></a>Vector 工作方式</h3><p>添加数据时，会改变大小。每当向数组中添加数据时，会在内存中新开辟一块比原来大的区域，把原来的Vector复制过来，填上新数据，再删除旧的Vector。</p>
+<h3 id="Vector最好存储的是对象"><a href="#Vector最好存储的是对象" class="headerlink" title="Vector最好存储的是对象"></a>Vector最好存储的是对象</h3><p>在创建<code>Vector</code>, 指定数据类型时，可以指定类类型，也可以指定类指针类型。</p>
+<p>指定类类型，存储的是对象。这种存储方式优于类指针。因为当存储对象是，Vector中的数据是在条线上的，各个对象是挨着的。当遍历，赋值时速度更快。存储类指针时，放到一起的是指针，数据可能在内存中的各个地方。另一方面，当增加新数据时，第一种方式要复制所有的数据，第二中方式只需复制指针。</p>
+<p>但无论如何，指针形式都不是优先考虑的。只有在必须使用是才使用。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Vertex</span></span><br><span class="line">{</span><br><span class="line">	<span class="type">int</span> x, y, z;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">std::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (std::ostream&amp; stream,<span class="type">const</span> Vertex&amp; vertices)   <span class="comment">//重载 &lt;&lt;</span></span><br><span class="line">{</span><br><span class="line">	stream &lt;&lt; vertices.x &lt;&lt;<span class="string">","</span>&lt;&lt; vertices.y &lt;&lt;<span class="string">","</span>&lt;&lt; vertices.z;</span><br><span class="line">	<span class="keyword">return</span> stream;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<p>可以写东西嘛</p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="添加遍历数据"><a href="#添加遍历数据" class="headerlink" title="添加遍历数据"></a>添加遍历数据</h3><p>添加元素函数：<code>push.back()</code></p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;Vertex&gt;vertices;</span><br><span class="line"></span><br><span class="line">vertices.<span class="built_in">push_back</span>({ <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> });    <span class="comment">//初始化列表</span></span><br><span class="line">vertices.<span class="built_in">push_back</span>({ <span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span> });</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<p>遍历函数</p>
+<p>第一种遍历用了重载过的<code>&lt;&lt;</code>符号，一般可以自己写一个<code>print()</code>函数。</p>
+<p>第二种遍历是范围<code>for</code>语句<code>，c++11</code>中新的方法。为了避免复制，应该使用引用&amp;。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; vertices.<span class="built_in">size</span>(); i++)</span><br><span class="line">    std::cout &lt;&lt; vertices[i] &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">const</span> Vertex&amp; v:vertices)</span><br><span class="line">    std::cout &lt;&lt; v&lt;&lt; std::endl;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="删除某个元素"><a href="#删除某个元素" class="headerlink" title="删除某个元素"></a>删除某个元素</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除第2个元素,不能直接写2</span></span><br><span class="line">vertices.<span class="built_in">erase</span>(vertices.<span class="built_in">begin</span>() + <span class="number">1</span>);</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="清空整个数组"><a href="#清空整个数组" class="headerlink" title="清空整个数组"></a>清空整个数组</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vertices.<span class="built_in">clear</span>()</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="当容器作为函数参数传入时，一定要引用传入"><a href="#当容器作为函数参数传入时，一定要引用传入" class="headerlink" title="当容器作为函数参数传入时，一定要引用传入"></a>当容器作为函数参数传入时，一定要引用传入</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Function</span><span class="params">(<span class="type">const</span> std::vector&lt;Vertex&gt;&amp; vertices)</span>     <span class="comment">//引用传入参数</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">std::vector&lt;Vertex&gt;vertices;</span><br><span class="line"></span><br><span class="line">vertices.<span class="built_in">push_back</span>({ <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> });    <span class="comment">//初始化列表</span></span><br><span class="line">vertices.<span class="built_in">push_back</span>({ <span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span> });</span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>(vertices);</span><br></pre></td></tr></tbody></table></figure>
+
 
                 
             </div>
@@ -469,7 +481,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Arya-Lay.github.io#大小写/2023/12/02/hello-world/">http://Arya-Lay.github.io#大小写/2023/12/02/hello-world/</a>
+                    <a href="http://Arya-Lay.github.io#大小写/2023/12/04/47-dong-tai-shu-zu-vector-in-c/">http://Arya-Lay.github.io#大小写/2023/12/04/47-dong-tai-shu-zu-vector-in-c/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,7 +566,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/04/11-how-to-debug-c-vs/">
+                <a href="/2023/12/04/48-stdvector-shi-yong-you-hua/">
                     <div class="card-image">
                         
                         
@@ -588,16 +600,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/02/hello-world/">
+                <a href="/2023/12/04/46-jian-tou-cao-zuo-fu-in-c/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -608,7 +620,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
                             </span>
                         <span class="publish-author">
                             
@@ -618,7 +630,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

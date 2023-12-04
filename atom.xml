@@ -6,7 +6,7 @@
   <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/atom.xml" rel="self"/>
   
   <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/"/>
-  <updated>2023-12-04T02:15:55.438Z</updated>
+  <updated>2023-03-15T11:33:34.730Z</updated>
   <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/</id>
   
   <author>
@@ -17,12 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇博客</title>
-    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/02/wo-de-di-yi-pian-bo-ke/"/>
-    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/02/wo-de-di-yi-pian-bo-ke/</id>
-    <published>2023-12-02T12:22:32.000Z</published>
-    <updated>2023-12-04T02:15:55.438Z</updated>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/zu-hui/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/zu-hui/</id>
+    <published>2023-12-04T11:56:39.007Z</published>
+    <updated>2023-03-15T11:33:34.730Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天组会，我介绍自己近期的工作的想法和进展情况。&lt;/p&gt;
+&lt;p&gt;我研究内容的主题是，在线性传感网络中，设计实现一种自适应的节点睡眠或唤醒调度方法。自适应的意思是指，网络中的每一个节点，根据自己所处的位置，以及当前网络中的流量情况，自行决定自己在接下来的时隙中是处于睡眠状态还</summary>
+        
+      
     
     
     
@@ -30,12 +39,230 @@
   </entry>
   
   <entry>
-    <title>my first blog</title>
-    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/02/my-first-blog/"/>
-    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/02/my-first-blog/</id>
-    <published>2023-12-02T12:18:25.000Z</published>
-    <updated>2023-12-02T12:22:04.404Z</updated>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/48-stdvector-shi-yong-you-hua/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/48-stdvector-shi-yong-you-hua/</id>
+    <published>2023-12-04T11:56:39.003Z</published>
+    <updated>2023-03-20T08:11:01.777Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;48-std-vector使用优化&quot;&gt;&lt;a href=&quot;#48-std-vector使用优化&quot; class=&quot;headerlink&quot; title=&quot;48 std::vector使用优化&quot;&gt;&lt;/a&gt;48</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/47-dong-tai-shu-zu-vector-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/47-dong-tai-shu-zu-vector-in-c/</id>
+    <published>2023-12-04T11:56:38.889Z</published>
+    <updated>2023-03-20T07:01:34.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;47-动态数组vector-in-C&quot;&gt;&lt;a href=&quot;#47-动态数组vector-in-C&quot; class=&quot;headerlink&quot; title=&quot;47 动态数组vector in C++&quot;&gt;&lt;/a&gt;47 动态数组vector in C++&lt;/h1&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/46-jian-tou-cao-zuo-fu-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/46-jian-tou-cao-zuo-fu-in-c/</id>
+    <published>2023-12-04T11:56:38.817Z</published>
+    <updated>2023-03-17T09:34:19.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;46-箭头操作符-in-C&quot;&gt;&lt;a href=&quot;#46-箭头操作符-in-C&quot; class=&quot;headerlink&quot; title=&quot;46 箭头操作符 in C++&quot;&gt;&lt;/a&gt;46 箭头操作符 in C++&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/45-kao-bei-yu-kao-bei-gou-zao-han-shu-inc/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/45-kao-bei-yu-kao-bei-gou-zao-han-shu-inc/</id>
+    <published>2023-12-04T11:56:38.705Z</published>
+    <updated>2023-03-20T13:07:20.531Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;45-拷贝与拷贝构造函数-in-C&quot;&gt;&lt;a href=&quot;#45-拷贝与拷贝构造函数-in-C&quot; class=&quot;headerlink&quot; title=&quot;45 拷贝与拷贝构造函数 in C++&quot;&gt;&lt;/a&gt;45 拷贝与拷贝构造函数 in C++&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/44-zhi-neng-zhi-zhen-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/44-zhi-neng-zhi-zhen-in-c/</id>
+    <published>2023-12-04T11:56:38.572Z</published>
+    <updated>2023-03-17T06:50:48.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;44-智能指针-in-C&quot;&gt;&lt;a href=&quot;#44-智能指针-in-C&quot; class=&quot;headerlink&quot; title=&quot;44 智能指针 in C++&quot;&gt;&lt;/a&gt;44 智能指针 in C++&lt;/h1&gt;&lt;h3 id=&quot;智能指针&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/43-dui-xiang-sheng-cun-qi-dui-xiang-zai-zhan-shang-de-sheng-cun-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/43-dui-xiang-sheng-cun-qi-dui-xiang-zai-zhan-shang-de-sheng-cun-in-c/</id>
+    <published>2023-12-04T11:56:38.571Z</published>
+    <updated>2023-03-17T05:49:43.309Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;43-对象生存期，对象在栈上的生存-in-C&quot;&gt;&lt;a href=&quot;#43-对象生存期，对象在栈上的生存-in-C&quot; class=&quot;headerlink&quot; title=&quot;43 对象生存期，对象在栈上的生存 in C++&quot;&gt;&lt;/a&gt;43 对象生存期，对象在栈上的生存</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/42-this-guan-jian-zi-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/42-this-guan-jian-zi-in-c/</id>
+    <published>2023-12-04T11:56:38.458Z</published>
+    <updated>2023-05-22T02:28:53.695Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;42-this关键字-in-C&quot;&gt;&lt;a href=&quot;#42-this关键字-in-C&quot; class=&quot;headerlink&quot; title=&quot;42 this关键字 in C++&quot;&gt;&lt;/a&gt;42 this关键字 in</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/41-yun-suan-fu-ji-qi-chong-zai-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/41-yun-suan-fu-ji-qi-chong-zai-in-c/</id>
+    <published>2023-12-04T11:56:38.227Z</published>
+    <updated>2023-03-10T03:00:34.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;41-运算符及其重载-in-C&quot;&gt;&lt;a href=&quot;#41-运算符及其重载-in-C&quot; class=&quot;headerlink&quot; title=&quot;41 运算符及其重载 in C++&quot;&gt;&lt;/a&gt;41 运算符及其重载 in</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/40-yin-shi-zhuan-huan-yu-explicit-guan-jian-zi/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/40-yin-shi-zhuan-huan-yu-explicit-guan-jian-zi/</id>
+    <published>2023-12-04T11:56:37.996Z</published>
+    <updated>2023-03-10T03:26:12.748Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;40-隐式转换与explicit关键字&quot;&gt;&lt;a href=&quot;#40-隐式转换与explicit关键字&quot; class=&quot;headerlink&quot; title=&quot;40 隐式转换与explicit关键字&quot;&gt;&lt;/a&gt;40 隐式转换与explicit关键字&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/39-new-guan-jian-zi-in-c/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/39-new-guan-jian-zi-in-c/</id>
+    <published>2023-12-04T11:56:37.957Z</published>
+    <updated>2023-03-09T06:55:12.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;39-new关键字-in-C&quot;&gt;&lt;a href=&quot;#39-new关键字-in-C&quot; class=&quot;headerlink&quot; title=&quot;39 new关键字 in C++&quot;&gt;&lt;/a&gt;39 new关键字 in C++&lt;/h1&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/11-how-to-debug-c-vs/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/04/11-how-to-debug-c-vs/</id>
+    <published>2023-12-04T11:56:37.955Z</published>
+    <updated>2023-02-23T02:22:25.265Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;11-How-to-DEBUG-C-VS&quot;&gt;&lt;a href=&quot;#11-How-to-DEBUG-C-VS&quot; class=&quot;headerlink&quot; title=&quot;11 How to DEBUG C++ VS&quot;&gt;&lt;/a&gt;11 How to DEBUG C++</summary>
+        
+      
     
     
     
