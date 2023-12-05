@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Git学习</title>
+      <link href="/2023/12/05/git-xue-xi/"/>
+      <url>/2023/12/05/git-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h2><p>Git是一种非常流行的分布式版本控制系统。版本控制系统，摆脱手动管理文件各个版本的麻烦。分布式的设计更安全，因为不再依赖中心服务器，不能联网的时候也能修改。</p><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>在Windows平台下，在官网下载，默认选项安装。</p><p>在安装后，右键可以打开Git Bash使用。</p><p>在命令行输入：用自己<code>GitHub</code>的账户和相应绑定的邮箱。</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span></span><br><span class="line">git config --global user.email <span class="string">"xxx"</span></span><br></pre></td></tr></tbody></table></figure><h2 id="Git使用"><a href="#Git使用" class="headerlink" title="Git使用"></a>Git使用</h2><h4 id="增加提交文件"><a href="#增加提交文件" class="headerlink" title="增加提交文件"></a>增加提交文件</h4><p>可以把版本库理解成一个仓库，里面放着我们的文件，同时git帮助我们追踪记录文件各个版本的信息。</p><p>新建一个空文件，注意路径不要有中文。</p><h5 id="进入该文件，把它变成Git可以管理的仓库："><a href="#进入该文件，把它变成Git可以管理的仓库：" class="headerlink" title="进入该文件，把它变成Git可以管理的仓库："></a>进入该文件，把它变成Git可以管理的仓库：</h5><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure><p><img src="D:\MyBlog\Hexo\source\picture\git20231205152153.png"></p><h5 id="新建一个readme-txt文件，并添加到Git仓库"><a href="#新建一个readme-txt文件，并添加到Git仓库" class="headerlink" title="新建一个readme.txt文件，并添加到Git仓库"></a>新建一个<code>readme.txt</code>文件，并添加到Git仓库</h5><p>要先在该目录中新建文件，再add。</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br></pre></td></tr></tbody></table></figure><h5 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h5><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "write a read file"</span><br></pre></td></tr></tbody></table></figure><p><code>git commit</code>命令是将文件提交到仓库，<code>- m "xxx"</code>是对这次提交的说明，可以描述这次提交做了什么等。</p><p>这次说明提交了一个文件，有一行被添加了。</p><p><img src="D:\MyBlog\Hexo\source\picture\git20231205154712.png"></p><h5 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h5><p>在<code>readme.tx</code>t中添加一行。</p><p>然后看一下仓库状态：</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></tbody></table></figure><p><img src="D:\MyBlog\Hexo\source\picture\git20231205155317.png"></p><p>这说明，对文件做了修改，但是还没有提交。</p><h5 id="查看修改："><a href="#查看修改：" class="headerlink" title="查看修改："></a>查看修改：</h5><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff readme.txt</span><br></pre></td></tr></tbody></table></figure><p><img src="D:\MyBlog\Hexo\source\picture\git20231205162540.png"></p><p>可以看到绿色那行，显示 增加了 <code>Git  is amazing.</code></p><p>这时候可以将文件添加，提交。在这个过程中，还可以看看仓库状态。</p><p><img src="D:\MyBlog\Hexo\source\picture\git20231205162954.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The Best C++ 01</title>
       <link href="/2023/12/04/the-best-c/"/>
       <url>/2023/12/04/the-best-c/</url>

@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Arya">
-    <meta name="description" content="44 智能指针 in C++智能指针智能指针的行为类似于常规指针，区别在于他复杂内存的自动释放，当对象超过其作用域时。
-某个时刻只能有一个unique_ptr指向一个给定的对象。当unique_pyr被销毁时，它所指向的对象的也会被销毁。
-">
+    <meta name="keywords" content="Git学习, Arya">
+    <meta name="description" content="Git介绍Git是一种非常流行的分布式版本控制系统。版本控制系统，摆脱手动管理文件各个版本的麻烦。分布式的设计更安全，因为不再依赖中心服务器，不能联网的时候也能修改。
+Git安装在Windows平台下，在官网下载，默认选项安装。
+在安装后，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Arya</title>
+    <title>Git学习 | Arya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -346,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Git学习</h1>
                 </div>
             </div>
         </div>
@@ -373,9 +373,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -387,21 +391,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-04
+                    2023-12-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-17
+                    2023-12-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    379
+                    413
                 </div>
                 
 
@@ -431,19 +435,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="44-智能指针-in-C"><a href="#44-智能指针-in-C" class="headerlink" title="44 智能指针 in C++"></a>44 智能指针 in C++</h1><h3 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h3><p>智能指针的行为类似于常规指针，区别在于他复杂内存的自动释放，当对象超过其作用域时。</p>
-<p>某个时刻只能有一个<code>unique_ptr</code>指向一个给定的对象。当<code>unique_pyr</code>被销毁时，它所指向的对象的也会被销毁。</p>
-<h3 id="unique-ptr"><a href="#unique-ptr" class="headerlink" title="unique_ptr"></a><code>unique_ptr</code></h3><p>作用域指针，超过作用域时，就会调用delete。</p>
-<p>该指针不能复制，只能是唯一的。因为如果复制的话，会有两个指针指向同一片区域，当其中有一个释放后，另一个指针会指向一块已经释放的区域，这显然是不行的。</p>
-<p>基本没有什么开销。</p>
-<p>使用<code>unique_pt</code>r时，<code>#include&lt;memory&gt;</code></p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;memory&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Entity</span></span><br><span class="line">{</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Entity</span>()</span><br><span class="line">	{</span><br><span class="line">		std::cout &lt;&lt; <span class="string">"Created Entity!"</span> &lt;&lt; std::endl;</span><br><span class="line">	}</span><br><span class="line">	~<span class="built_in">Entity</span>()</span><br><span class="line">	{</span><br><span class="line">		std::cout &lt;&lt; <span class="string">"Destroyed Entity!"</span> &lt;&lt; std::endl;</span><br><span class="line">	}</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	{</span><br><span class="line">		std::unique_ptr&lt;Entity&gt;<span class="built_in">entity</span>(<span class="keyword">new</span> <span class="built_in">Entity</span>());</span><br><span class="line">		<span class="comment">//std::unique_ptr&lt;Entity&gt;entity3 = new Entity();         //unique_ptr必须显式调用构造函数</span></span><br><span class="line"></span><br><span class="line">		std::unique_ptr&lt;Entity&gt;entity2 = std::<span class="built_in">make_unique</span>&lt;Entity&gt;();  <span class="comment">//这种调用方式更安全</span></span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//超过这个作用域时，指针就会被自动释放。</span></span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+                <h2 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h2><p>Git是一种非常流行的分布式版本控制系统。版本控制系统，摆脱手动管理文件各个版本的麻烦。分布式的设计更安全，因为不再依赖中心服务器，不能联网的时候也能修改。</p>
+<h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>在Windows平台下，在官网下载，默认选项安装。</p>
+<p>在安装后，右键可以打开Git Bash使用。</p>
+<p>在命令行输入：用自己<code>GitHub</code>的账户和相应绑定的邮箱。</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span></span><br><span class="line">git config --global user.email <span class="string">"xxx"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<h3 id="shared-ptr"><a href="#shared-ptr" class="headerlink" title="shared_ptr"></a>shared_ptr</h3></blockquote>
-<p>允许多个<code>shared_ptr</code>指针指向同一个对象。同时会分配一个引用计数。每<code>copy</code>一个，引用计数就会<code>+1</code>。当引用计数<code>=0</code>时，对象被销毁。</p>
-<p>会有一点开销，因为维护了一个引用计数。</p>
-<h3 id="weak-ptr"><a href="#weak-ptr" class="headerlink" title="weak_ptr"></a>weak_ptr</h3><p>当该指针由<code>shared_ptr</code>赋值来的时候，<code>shared_ptr</code>的引用计数不会增加。</p>
+<h2 id="Git使用"><a href="#Git使用" class="headerlink" title="Git使用"></a>Git使用</h2><h4 id="增加提交文件"><a href="#增加提交文件" class="headerlink" title="增加提交文件"></a>增加提交文件</h4><p>可以把版本库理解成一个仓库，里面放着我们的文件，同时git帮助我们追踪记录文件各个版本的信息。</p>
+<p>新建一个空文件，注意路径不要有中文。</p>
+<h5 id="进入该文件，把它变成Git可以管理的仓库："><a href="#进入该文件，把它变成Git可以管理的仓库：" class="headerlink" title="进入该文件，把它变成Git可以管理的仓库："></a>进入该文件，把它变成Git可以管理的仓库：</h5><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="D:\MyBlog\Hexo\source\picture\git20231205152153.png"></p>
+<h5 id="新建一个readme-txt文件，并添加到Git仓库"><a href="#新建一个readme-txt文件，并添加到Git仓库" class="headerlink" title="新建一个readme.txt文件，并添加到Git仓库"></a>新建一个<code>readme.txt</code>文件，并添加到Git仓库</h5><p>要先在该目录中新建文件，再add。</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h5><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "write a read file"</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>git commit</code>命令是将文件提交到仓库，<code>- m "xxx"</code>是对这次提交的说明，可以描述这次提交做了什么等。</p>
+<p>这次说明提交了一个文件，有一行被添加了。</p>
+<p><img src="D:\MyBlog\Hexo\source\picture\git20231205154712.png"></p>
+<h5 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h5><p>在<code>readme.tx</code>t中添加一行。</p>
+<p>然后看一下仓库状态：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="D:\MyBlog\Hexo\source\picture\git20231205155317.png"></p>
+<p>这说明，对文件做了修改，但是还没有提交。</p>
+<h5 id="查看修改："><a href="#查看修改：" class="headerlink" title="查看修改："></a>查看修改：</h5><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff readme.txt</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="D:\MyBlog\Hexo\source\picture\git20231205162540.png"></p>
+<p>可以看到绿色那行，显示 增加了 <code>Git  is amazing.</code></p>
+<p>这时候可以将文件添加，提交。在这个过程中，还可以看看仓库状态。</p>
+<p><img src="D:\MyBlog\Hexo\source\picture\git20231205162954.png"></p>
 
                 
             </div>
@@ -470,7 +492,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Arya-Lay.github.io#大小写/2023/12/04/44-zhi-neng-zhi-zhen-in-c/">http://Arya-Lay.github.io#大小写/2023/12/04/44-zhi-neng-zhi-zhen-in-c/</a>
+                    <a href="http://Arya-Lay.github.io#大小写/2023/12/05/git-xue-xi/">http://Arya-Lay.github.io#大小写/2023/12/05/git-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -507,7 +529,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -551,17 +577,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/12/04/45-kao-bei-yu-kao-bei-gou-zao-han-shu-inc/">
+                <a href="/2023/12/05/git-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Git学习">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Git学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -571,9 +598,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -581,6 +608,15 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -592,13 +628,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/04/43-dui-xiang-sheng-cun-qi-dui-xiang-zai-zhan-shang-de-sheng-cun-in-c/">
+                <a href="/2023/12/04/the-best-c/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="The Best C++ 01">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">The Best C++ 01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -613,11 +649,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            arya
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/The-Best-C/" class="post-category">
+                                    The Best C++
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
                 </div>
                 
             </div>

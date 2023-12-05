@@ -6,7 +6,7 @@
   <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/atom.xml" rel="self"/>
   
   <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/"/>
-  <updated>2023-12-04T14:12:15.366Z</updated>
+  <updated>2023-12-05T08:46:50.795Z</updated>
   <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git学习</title>
+    <link href="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/05/git-xue-xi/"/>
+    <id>http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/2023/12/05/git-xue-xi/</id>
+    <published>2023-12-05T06:58:17.157Z</published>
+    <updated>2023-12-05T08:46:50.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Git介绍&quot;&gt;&lt;a href=&quot;#Git介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Git" scheme="http://arya-lay.github.io/#%E5%A4%A7%E5%B0%8F%E5%86%99/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>The Best C++ 01</title>
